@@ -26,13 +26,13 @@
     function renderPage(){
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
-         if (slug == "creekside-privacy-policy"){
+         if (slug == "peninsula-privacy-policy"){
            $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/575058fa6e6f64418b000000/image/jpeg/undefined/ctc_440x1200_side_privacy.jpg")
         }
-         if (slug == "creekside-contact-us"){
+         if (slug == "peninsula-contact-us"){
            $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/575058fa6e6f64418b000000/image/jpeg/undefined/ctc_440x1200_side_contact.jpg")
         }
-         if (slug == "creekside-services"){
+         if (slug == "peninsula-services"){
            $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/575058fa6e6f64418b000000/image/jpeg/undefined/ctc_440x1200_side_services.jpg")
         }
     

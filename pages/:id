@@ -27,13 +27,13 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
          if (slug == "peninsula-privacy-policy"){
-           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/ctc_440x1200_side_privacy.jpg")
+           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/psc_440x1200_side_privacy.jpg")
         }
          if (slug == "peninsula-contact-us"){
-           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/ctc_440x1200_side_contact.jpgg")
+           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/psc_440x1200_side_contact.jpg")
         }
          if (slug == "peninsula-services"){
-           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/ctc_440x1200_side_services.jpg")
+           $('#side_image').attr('src', "http://assets.codecloudapp.com/sites/574c69996e6f641030000000/image/jpeg/undefined/psc_440x1200_side_services.jpg")
         }
     
         prefix = get_prefix();

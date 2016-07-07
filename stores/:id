@@ -157,7 +157,7 @@
         else{
             $('#jobs_header').hide();
         }
-        show_content();
+        
         var stores = getStoresList();
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
@@ -174,5 +174,6 @@
 			button_ALIGN: "top left",
 			container: 'zoom_container'
 		});
+		show_content();
     }
 </script>

@@ -21,8 +21,7 @@
                     <div id="zoom_container" class="map_container">
                         <img id="png_map" class="png_map" alt="center map" src=""  />
                     
-                        
-                	    </div>    
+                          
                     </div>
                     <h5 class="details_header">Store Hours & Information</h5>
                     <table id="reg_hours_container" class="hours_container"></table>

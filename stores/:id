@@ -18,7 +18,12 @@
                     <a class="main_btn animated_btn" href="{{website}}" target="_blank" style="{{show}}">Visit Website</a>
                 </div>
                 <div class="details_col_9">
+                    <div id="zoom_container" class="map_container">
+                        <img id="png_map" class="png_map" alt="center map" src=""  />
                     
+                        <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+                	    </div>    
+                    </div>
                     <h5 class="details_header">Store Hours & Information</h5>
                     <table id="reg_hours_container" class="hours_container"></table>
                     <div class="details_desc margin_30">{{{rich_description}}}</div>
@@ -89,7 +94,7 @@
 </script>
 <!-- End Jobs Template-->
 
-<script src="http://kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>s
+<script src="http://kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>
 <script>
     $(document).ready(function(e){
         init(e);

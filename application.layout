@@ -59,8 +59,8 @@
     
     <!-- Site data -->
     <script>
-        // setEndPoint('//peninsula.mallmaverick.com/api/v3/peninsula/all.json');
-        setEndPoint('//twinpines.mallmaverick.com/api/v3/twinpines/all.json');
+        setEndPoint('//peninsula.mallmaverick.com/api/v3/peninsula/all.json');
+        
     </script>
 </head>
 
@@ -90,15 +90,15 @@
                     <a href="https://twitter.com/PeninsulaCtr" target="_blank">
                         <span id="social_twitter"></span>
                     </a>
-                    <a href="https://www.pinterest.com/shoppeninsula/" target="_blank">
-                        <span id="social_pinterest"></span>
-                    </a>
+                    <!--<a href="https://www.pinterest.com/shoppeninsula/" target="_blank">-->
+                    <!--    <span id="social_pinterest"></span>-->
+                    <!--</a>-->
                     <a href="https://www.instagram.com/Shoppencenter" target="_blank">
                         <span id="social_insta"></span>
                     </a>
-                    <!--<a href="#" target="_blank">-->
-                    <!--    <span id="social_yt"></span>-->
-                    <!--</a>-->
+                    <a href="http://bit.ly/2roAGqm" target="_blank">
+                        <span id="social_yt"></span>
+                    </a>
                     <!--<a href="#" target="_blank">-->
                     <!--    <span id="social_gplus"></span>-->
                     <!--</a>-->

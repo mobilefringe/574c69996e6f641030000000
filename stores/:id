@@ -126,6 +126,7 @@
         } else {
             $('#reg_hours_container').hide();
         }
+        
         var store_promo_ids = store_details.promotions
         var store_promos = getPromotionsForIds(store_promo_ids).sortBy(function(o){ return o.start_date });
         var published_promos = [];
@@ -138,10 +139,10 @@
         });
         if (published_promos.length > 0){
             renderPromotions("#promos_container","#promos_template", published_promos);
-        }
-        else {
+        } else {
             $('#promotions_header').hide();
         }
+        
         var store_job_ids = store_details.jobs
         var store_jobs = getJobsForIds(store_job_ids).sortBy(function(o){ return o.start_date });
         var published_jobs = [];
@@ -154,10 +155,10 @@
         });
         if (published_jobs.length > 0){
             renderJobs('#jobs_container', '#jobs_template', published_jobs);
-        }
-        else {
+        } else {
             $('#jobs_header').hide();
         }
+        
         show_content();
         var stores = getStoresList();
         $("#png_map").attr("src", getPNGMapURL())

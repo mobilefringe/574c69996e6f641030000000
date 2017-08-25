@@ -123,8 +123,7 @@
             var hours = getHoursForIds(hour_ids);
             var hours = getHoursForStoreSlug(store_details.slug)
             renderStoreDetailsHours('#reg_hours_container','#reg_hours_template', hours, 'reg_hours');
-        }
-        else {
+        } else {
             $('#reg_hours_container').hide();
         }
         var store_promo_ids = store_details.promotions

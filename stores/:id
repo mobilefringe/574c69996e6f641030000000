@@ -119,7 +119,7 @@
         var store_details = getStoreDetailsBySlug(slug);
         renderStoreDetails('#store_details_container','#store_details_template', store_details);
         var hour_ids = store_details.store_hours;
-        if (hour_ids.length > 0){
+        if (hour_ids != null){
             // var hours = getHoursForIds(hour_ids);
             var hours = getHoursForStoreSlug(store_details.slug)
             renderStoreDetailsHours('#reg_hours_container','#reg_hours_template', hours, 'reg_hours');

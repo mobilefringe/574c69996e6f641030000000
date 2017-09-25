@@ -119,9 +119,10 @@
         var store_details = getStoreDetailsBySlug(slug);
         console.log(store_details)
         renderStoreDetails('#store_details_container','#store_details_template', store_details);
+        
         var hour_ids = store_details.store_hours;
         if (hour_ids != null){
-            var hours = getHoursForStoreSlug(store_details.slug)
+            var hours = getHoursForStoreSlug(store_details.slug).sortBy(function(o){ return o.day_of_week });
             renderStoreDetailsHours('#reg_hours_container','#reg_hours_template', hours, 'reg_hours');
         } else {
             $('#reg_hours_container').hide();

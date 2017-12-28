@@ -1036,8 +1036,8 @@ div.floating-cart.moveToCart{
         transition: all 200ms ease-out;
     }
     .add-cart-large:hover{
-    	color: #f89d54;
-    	border-color:#f89d54;
+    	color: $theme_colour;
+    	border-color:$theme_colour;
     	-webkit-transition: all 200ms ease-out;
     	   -moz-transition: all 200ms ease-out;
     		-ms-transition: all 200ms ease-out;
@@ -1138,8 +1138,8 @@ div.floating-cart.moveToCart{
         
         .remove_from_basket {
             background: #fff;
-            color:#f89d54;
-            border: 1px solid #f89d54;
+            color:$theme_colour;
+            border: 1px solid $theme_colour;
             &:hover{
             // background: #fff;
             color: #000;
@@ -1212,8 +1212,8 @@ div.floating-cart.moveToCart{
 }
 .dets_btn:hover{
     text-decoration:none;
-	color: #f89d54;
-	border-color:#f89d54;
+	color: $theme_colour;
+	border-color:$theme_colour;
 	-webkit-transition: all 200ms ease-out;
 	   -moz-transition: all 200ms ease-out;
 		-ms-transition: all 200ms ease-out;
@@ -1222,12 +1222,12 @@ div.floating-cart.moveToCart{
 			cursor:pointer;
 }
 .print_btn {
-    background: #f89d54;
+    background: $theme_colour;
     color:#fff!important;
-    border: 1px solid #f89d54;
+    border: 1px solid $theme_colour;
     &:hover{
     background: #fff;
-    color: #f89d54!important;
+    color: $theme_colour!important;
     }
 }
 .social_icons{

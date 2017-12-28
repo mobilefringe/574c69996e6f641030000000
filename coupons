@@ -341,7 +341,7 @@
                 val.store_name = store_details.name;
                 val.image_url = "//mallmaverick.com"+store_details.store_front_url;
                 if(val.image_url.indexOf('missing.png') > -1){
-                    image_url
+                   val.image_url = site_json.default_image;
                 }
             }
             else {

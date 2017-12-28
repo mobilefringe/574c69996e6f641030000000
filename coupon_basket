@@ -195,29 +195,17 @@
       
         $('.colors-large a').click(function(){return false;});
         
-        // $(".print_btn").click(function(e){
-            // printPage();
-        // });
     	$('.add-to-basket').each(function(i, el){
     	   // console.log("baskets", $(el));
     		$(el).click(function(){
     		  //  console.log("clicked", $(el));
     		    var current_coupon_id = $(el).parent().parent().attr("id");
     		    console.log(current_coupon_id);
-    		  
-    		  //  $(".basket_number").text(parseInt($(".basket_number").text())-1);
     		        $("#"+current_coupon_id).parent().hide();
     		        //remove coupon from list variable
     		        selected_coupon_id = $.grep(selected_coupon_id, function( val, i ) {
                         return (val !== current_coupon_id);
                     });
-    		    //getting the logo image
-    		  //  console.log($("#"+$(el).parent().parent().attr("id") +" .product-front"));
-    		    
-    			//add updated coupon list to localstorage
-    // 			localStorage['coupon_ids'] = JSON.stringify(selected_coupon_id);
-    // 			console.log(localStorage['coupon_ids']);
-                // $.cookie("coupon_ids",JSON.stringify(selected_coupon_id)); 
                 Cookies.remove('coupon_ids');
                 Cookies.set('coupon_ids', JSON.stringify(selected_coupon_id));
                 $(".basket_number").text((Object.keys(selected_coupon_id).length));
@@ -228,18 +216,6 @@
 			     }
     		});
     	})
-
-        // function updatePage (){
-        //     // selected_coupon_id;
-        //      $(".basket_number").text(Object.keys(selected_coupon_id).length);
-        //     // $.each(selected_coupon_id, function(key,val){ 
-        //     //     $("#" +val + " .add-to-basket").attr("is_in_cart","true");
-    	   //    // $("#" +val + " .add-to-basket").attr("src","//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508347595000/CheckmarkGreen.png");
-    	   //    // $("#"+val).addClass("green_selected_box"); 
-        //     // })
-            
-        // }
-    
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
@@ -275,15 +251,6 @@
             else {
                 val.description_short = val.description
             }
-            // var show_date = new Date (val.show_on_web_date + site_json.time_zone);
-            // start = new Date (val.start_date + site_json.time_zone);
-            // end = new Date (val.end_date + site_json.time_zone);
-            // if (start.toDateString() == end.toDateString()) {
-            //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
-            // } else {
-            //     val.dates = "Starts " + (get_month(start.getMonth()))+" "+(start.getDate())+" - Ends "+get_month(end.getMonth())+" "+end.getDate();    
-            // }
-            
             var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
@@ -309,37 +276,8 @@
         var float_style_2="body.MakeFloatingCart div.floating-cart.moveToCart{left: "+float_to_position.left+"px!important;top:"+ (float_to_position.top+50) +"px !important;width: 21px;height: 22px;box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0);-webkit-transition: all 200ms ease-out;-moz-transition: all 200ms ease-out;-ms-transition: all 200ms ease-out;-o-transition: all 200ms ease-out;transition: all 200ms ease-out;}";
         $("<style type='text/css'> "+ float_style_1 + " " +float_style_2 + "</style>").appendTo($(".coupons_container").parent());
         
-        // console.log($(".coupons_container").parent() );
     }
     $(window).load(function(){
         addNewStyle();
     });
-    // function renderStoreList(container, template, collection, type, starter, breaker){
-    //     var item_list = [];
-    //     var item_rendered = [];
-    //     var template_html = $(template).html();
-    //     Mustache.parse(template_html);   // optional, speeds up future uses
-    //     var store_initial="";
-    //     $.each( collection , function( key, val ) {
-    //         if (type == "stores" || type == "category_stores"){
-    //             if(!val.store_front_url ||  val.store_front_url.indexOf('missing.png') > -1 || val.store_front_url.length === 0){
-    //                 val.alt_store_front_url = "";
-    //             } else {
-    //                 val.alt_store_front_url = getImageURL(val.store_front_url);    
-    //             }
-    //         }
-    //         if(val.categories !== null && val.categories !== undefined){
-    //             category_of_stores = $.merge( val.categories, category_of_stores);
-    //         }
-    //         // console.log(val);
-    //         var rendered = Mustache.render(template_html,val)
-    //         if (val != null && val != undefined && val.total_published_coupons > 0){
-    //             // console.log(val.total_published_coupons);
-    //             item_rendered.push(rendered);
-    //         }
-    //     });
-    //     $(container).show();
-    //     $(container).html(item_rendered.join(''));
-    // }
-
 </script>

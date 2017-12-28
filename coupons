@@ -340,7 +340,7 @@
                 val.store_detail_btn = store_details.slug ;
                 val.store_name = store_details.name;
                 val.image_url = "//mallmaverick.com"+store_details.store_front_url;
-                if(val.promo_image_url_abs.indexOf('missing.png') > -1){
+                if(val.image_url.indexOf('missing.png') > -1){
                     
                     console.log(val.image_url);
                 }

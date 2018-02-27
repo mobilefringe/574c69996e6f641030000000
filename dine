@@ -11,7 +11,7 @@
             Select Category <i class="fa fa-chevron-down visible_phone pull-right"></i>
         </a>
         <ul id="category_container2" class="dropdown-menu" aria-labelledby="cat_dd2">
-            <li href="#" class="show_all_stores">All</li>
+            <li href="#" class="show_all_stores">ALL</li>
             <li class="show_cat_stores" data-id="5663">AMERICAN</li>
             <li class="show_cat_stores" data-id="5659">ASIAN</li>
             <li class="show_cat_stores" data-id="5662">COFFEE/JUICE</li>
@@ -19,7 +19,11 @@
             <li class="show_cat_stores" data-id="5657">MEXICAN</li>
             <li class="show_cat_stores" data-id="5656">MEDITERRANEAN</li>
              <li class="show_cat_stores" data-id="5661">PERUVIAN</li>
+             <li class="show_cat_stores" data-id="5654">RESTAURANTS - CASUAL</li>
+             <li class="show_cat_stores" data-id="5658">RESTAURANTS - FULL SERVICE</li>
              <li class="show_cat_stores" data-id="5665">SEAFOOD</li>
+             <li class="show_cat_stores" data-id="5660">THAI</li>
+             <li class="show_cat_stores" data-id="5664">VIETNAMESE</li>
             
         </ul>
     </div>
@@ -41,19 +45,19 @@
                     <img src="//codecloud.cdn.speedyrails.net/sites/57f3de146e6f644974010000/image/png/1463153622000/chevron_down.png" class="category_icon" alt="">
                 </a>
                 <ul id="category_container" class="dropdown-menu" aria-labelledby="cat_dd">
-                    <li href="#" class="show_all_stores">All</li>
-                   <li class="show_cat_stores" data-id="4189">Juice Shop</li>
-            <li class="show_cat_stores" data-id="4191">Chinese Restaurant</li>
-            <li class="show_cat_stores" data-id="4209">Coffee Shop</li>
-            <li class="show_cat_stores" data-id="4217">Grocery Store</li>
-            <li class="show_cat_stores" data-id="4179">Icecream Shop</li>
-            <li class="show_cat_stores" data-id="4181">Mediterranean Restaurant</li>
-            <li class="show_cat_stores" data-id="4190">Mexican Restaurant</li>
-             <li class="show_cat_stores" data-id="4188">Peruvian Restaurant</li>
-             <li class="show_cat_stores" data-id="4203">Pizza Restaurant</li>
-                 <li class="show_cat_stores" data-id="4210">Restaurant</li>
-                 <li class="show_cat_stores" data-id="4183">Thai Restaurant</li>
-                 <li class="show_cat_stores" data-id="4187">Vietnamese Restauran
+                   <li href="#" class="show_all_stores">ALL</li>
+            <li class="show_cat_stores" data-id="5663">AMERICAN</li>
+            <li class="show_cat_stores" data-id="5659">ASIAN</li>
+            <li class="show_cat_stores" data-id="5662">COFFEE/JUICE</li>
+            <li class="show_cat_stores" data-id="5655">DESSERTS/SPECIALTY</li>
+            <li class="show_cat_stores" data-id="5657">MEXICAN</li>
+            <li class="show_cat_stores" data-id="5656">MEDITERRANEAN</li>
+             <li class="show_cat_stores" data-id="5661">PERUVIAN</li>
+             <li class="show_cat_stores" data-id="5654">RESTAURANTS - CASUAL</li>
+             <li class="show_cat_stores" data-id="5658">RESTAURANTS - FULL SERVICE</li>
+             <li class="show_cat_stores" data-id="5665">SEAFOOD</li>
+             <li class="show_cat_stores" data-id="5660">THAI</li>
+             <li class="show_cat_stores" data-id="5664">VIETNAMESE</li>
                 </ul>
             </div>
         </div>
@@ -104,17 +108,19 @@
     
     function renderPage(){
         var stores = [];
-        var s1 = getStoresListByCategoryID(4189)
-        var s2 = getStoresListByCategoryID(4209)
-        var s3 = getStoresListByCategoryID(4217)
-        var s4 = getStoresListByCategoryID(4179)
-         var s5 = getStoresListByCategoryID(4181)
-        var s6 = getStoresListByCategoryID(4190)
-        var s7 = getStoresListByCategoryID(4188)
-        var s8 = getStoresListByCategoryID(4203)
-        var s9 = getStoresListByCategoryID(4210)
-        var s10 = getStoresListByCategoryID(4183)
-        var s11 = getStoresListByCategoryID(4187)
+        var s1 = getStoresListByCategoryID(5663)
+        var s2 = getStoresListByCategoryID(5659)
+        var s3 = getStoresListByCategoryID(5662)
+        var s4 = getStoresListByCategoryID(5655)
+         var s5 = getStoresListByCategoryID(5657)
+        var s6 = getStoresListByCategoryID(5656)
+        var s7 = getStoresListByCategoryID(5661)
+        var s8 = getStoresListByCategoryID(5654)
+        var s9 = getStoresListByCategoryID(5658)
+        var s10 = getStoresListByCategoryID(5665)
+        var s11 = getStoresListByCategoryID(5660)
+        var s12 = getStoresListByCategoryID(5664)
+        
         stores = stores.concat(s1)
         stores = stores.concat(s2)
         stores = stores.concat(s3)
@@ -126,6 +132,7 @@
          stores = stores.concat(s9)
         stores = stores.concat(s10)
         stores = stores.concat(s11)
+        stores = stores.concat(s12)
    
         var newarr = [];
         var unique = {};

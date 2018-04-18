@@ -41,6 +41,19 @@
     // });
     function renderAll(){
         console.log("this", this);
+        $.ajax({
+            url: "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js",
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                if(data.store_files.length > 0){
+                    store_front_image_url = data.store_files[0].url;
+                }
+            },
+            error: function (data){
+                store_front_image_url = "";
+            }
+        });
         var cache_coupon_ids = $.cookie().coupon_ids;
         if (cache_coupon_ids) {
             selected_coupon_id = JSON.parse(cache_coupon_ids);

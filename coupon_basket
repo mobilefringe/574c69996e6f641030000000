@@ -278,5 +278,6 @@
     }
     $(window).load(function() {
         addNewStyle();
+        show_content();
     });
 </script>

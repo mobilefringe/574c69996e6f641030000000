@@ -26,7 +26,7 @@
         </div>
     </div>
 </div>
-<!--<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
 
     var selected_coupon_id = [];
@@ -40,18 +40,7 @@
         
     // });
     function renderAll(){
-        
-        $.ajax({
-            url: "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js",
-            dataType: 'json',
-            async: false,
-            success: function(data) {
-                console.log("this", this);
-            },
-            error: function (data){
-                console.log("this error", data);
-            }
-        });
+        console.log("this", this);
         var cache_coupon_ids = $.cookie().coupon_ids;
         if (cache_coupon_ids) {
             selected_coupon_id = JSON.parse(cache_coupon_ids);

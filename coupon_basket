@@ -119,7 +119,6 @@
             selected_coupon_id = JSON.parse(cache_coupon_ids);
             // do a chack to make sure that if expired coupon is in cookie, it gets removed
             $.each(selected_coupon_id, function(i, val) {
-                // console.log(val);
                 var new_arr = $.grep(all_coupons, function(value, i) {
                     return (value.id.toString() == val);
                 });
@@ -128,15 +127,10 @@
                         return (value !== val);
                     });
                 }
-                // console.log(new_arr);
             });
-            console.log(selected_coupon_id);
-
-            // console.log(coupons);
 
             $.each(all_coupons, function(index, val) {
                 var is_inArray = $.grep(Object.keys(selected_coupon_id), function(i) {
-                    // console.log(value);
                     return val.id.toString() == selected_coupon_id[i];
                 });
                 if (is_inArray.length > 0) {
@@ -196,9 +190,7 @@
         });
 
         $('.add-to-basket').each(function(i, el) {
-            // console.log("baskets", $(el));
             $(el).click(function() {
-                //  console.log("clicked", $(el));
                 var current_coupon_id = $(el).parent().parent().attr("id");
                 console.log(current_coupon_id);
                 $("#" + current_coupon_id).parent().hide();
@@ -242,8 +234,6 @@
             }
             if (val.promo_image_url_abs.indexOf('missing.png') > 0) {
                 val.promo_image_url_abs = site_json.default_image;
-                // val.promo_image = "display:none";
-                // val.full_width = "width:100%"
             }
             if (val.description.length > 200) {
                 val.description_short = val.description.substring(0, 200) + "..."
@@ -268,9 +258,7 @@
     });
 
     function addNewStyle() {
-        // console.log( $(".basket_number"));
         var float_to_position = $(".basket_number").offset();
-        // console.log("float_to_position", float_to_position);
         var float_style_1 = "div.floating-cart.moveToCart{left: " + float_to_position.left + "px!important;top:" + float_to_position.top + "px !important;width: 47px;height: 47px;	-webkit-transition: all 800ms ease-in-out;-moz-transition: all 800ms ease-in-out;-ms-transition: all 800ms ease-in-out;-o-transition: all 800ms ease-in-out;transition: all 800ms ease-in-out; }";
         var float_style_2 = "body.MakeFloatingCart div.floating-cart.moveToCart{left: " + float_to_position.left + "px!important;top:" + (float_to_position.top + 50) + "px !important;width: 21px;height: 22px;box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0);-webkit-transition: all 200ms ease-out;-moz-transition: all 200ms ease-out;-ms-transition: all 200ms ease-out;-o-transition: all 200ms ease-out;transition: all 200ms ease-out;}";
         $("<style type='text/css'> " + float_style_1 + " " + float_style_2 + "</style>").appendTo($(".coupons_container").parent());

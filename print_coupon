@@ -36,9 +36,10 @@
         loadMallDataCached(renderAll);
         
     });
-    // $(window).load(function(e){
-        
-    // });
+    $(window).load(function(e){
+        init(e);
+        loadMallDataCached(renderAll);
+    });
     function renderAll(){
         console.log("this", this);
         var cache_coupon_ids = $.cookie().coupon_ids;

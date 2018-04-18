@@ -84,7 +84,6 @@
                 val.promo_image_url_abs  = store_details.store_front_url_abs;
             }
             if (val.promo_image_url_abs.indexOf('missing.png') > -1){
-                // val.promo_image_show="display:none";
                 val.promo_image_url_abs  = site_json.default_image ;
             }
             if (val.description.length > 200){

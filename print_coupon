@@ -33,7 +33,8 @@
     
     $(document).ready(function(e){
         init(e);
-        loadMallDataCached(renderAll);
+        setTimeout(function () {loadMallDataCached(renderAll); }, 500);
+        
     });
     $(window).load(function(e){
         setTimeout(function () { window.print(); }, 500);

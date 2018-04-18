@@ -31,15 +31,14 @@
 
     var selected_coupon_id = [];
     
-    // $(document).ready(function(e){
-    //     init(e);
-    //     loadMallDataCached(renderAll);
-        
-    // });
-    $(window).load(function(e){
+    $(document).ready(function(e){
         init(e);
         loadMallDataCached(renderAll);
+        
     });
+    // $(window).load(function(e){
+        
+    // });
     function renderAll(){
         console.log("this", this);
         var cache_coupon_ids = $.cookie().coupon_ids;

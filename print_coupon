@@ -40,18 +40,15 @@
         
     // });
     function renderAll(){
-        // var cache_coupon_ids = localStorage['coupon_ids'];
         var cache_coupon_ids = $.cookie().coupon_ids;
         if (cache_coupon_ids) {
             selected_coupon_id = JSON.parse(cache_coupon_ids);
             console.log(selected_coupon_id);
             var coupons = [];
-            // console.log(coupons);
             all_coupons = getCouponsList();
             
             $.each(all_coupons , function (index, val){
                 var is_inArray = $.grep(Object.keys(selected_coupon_id), function(i) {
-                    // console.log(value);
                     return val.id.toString() ==selected_coupon_id[i];
                 });
                 if(is_inArray.length > 0){

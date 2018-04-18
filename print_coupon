@@ -64,6 +64,7 @@
         }
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
+        show_content();
     }
     
     function renderCoupons(container, template, collection){

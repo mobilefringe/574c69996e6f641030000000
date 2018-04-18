@@ -31,11 +31,11 @@
 
     var selected_coupon_id = [];
     
-    $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderAll);
+    // $(document).ready(function(e){
+    //     init(e);
+    //     loadMallDataCached(renderAll);
         
-    });
+    // });
     $(window).load(function(e){
         init(e);
         loadMallDataCached(renderAll);

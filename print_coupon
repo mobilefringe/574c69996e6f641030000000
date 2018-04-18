@@ -1,5 +1,5 @@
 <link href="../coupons.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
 <div id="wrapper" class="main_container">
     <div id="grid" class="row">
         <div id="coupon_container" class="coupons_container">
@@ -26,7 +26,7 @@
         </div>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
 
     var selected_coupon_id = [];

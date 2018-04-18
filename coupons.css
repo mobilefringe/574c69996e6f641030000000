@@ -359,7 +359,7 @@ div.floating-cart.moveToCart{
         position: relative;
         perspective: 800px;
         width:100%;/*400px;*/
-        height:250px;
+        height:270px;
         transform-style: preserve-3d;
         transition: transform 5s;
     	float:left; 

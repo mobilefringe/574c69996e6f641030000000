@@ -334,7 +334,7 @@
 
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
-
+        shoe_content();
     }
 
     function renderCoupons(container, template, collection) {

@@ -355,7 +355,7 @@
             return 0;
         });
         $.each(collection, function(key, val) {
-        }0;
+        });
         $(container).html(item_rendered.join(''));
     }
 

@@ -61,6 +61,9 @@ $animation_color: #6e3835;
 .nav_container {
     width: calc(100% - 230px);
 }
+.feature_row .feature_col {
+    
+}
 @media (max-width: 768px) {
     .logo_container {
         width: 330px;

@@ -79,7 +79,9 @@ $animation_color: #6e3835;
         width: 100%;
     }
 }
-
+@media (max-width: 768px) { 
+    
+}
 
 
 

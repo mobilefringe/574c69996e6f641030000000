@@ -55,7 +55,9 @@ $animation_color: #6e3835;
     background-image: url(//codecloud.cdn.speedyrails.net/sites/57f3de146e6f644974010000/image/jpeg/undefined/psc_1920x150_banner_privacy.jpg);
 }
 
-
+.logo_container {
+    width: 230px;
+}
 
 
 

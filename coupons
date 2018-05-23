@@ -133,8 +133,8 @@
             return o.store_name;
         });
         coupons.sort(function(a, b){
-            if(a.firstname < b.firstname) return -1;
-            if(a.firstname > b.firstname) return 1;
+            if(a.store_name < b.store_name) return -1;
+            if(a.store_name > b.store_name) return 1;
             return 0;
         });
         console.log(coupons);

@@ -132,7 +132,7 @@
         var coupons = getCouponsList().sortBy(function(o) {
             return o.store_name;
         });
-        .sort(function(a, b){
+        coupons.sort(function(a, b){
             if(a.firstname < b.firstname) return -1;
             if(a.firstname > b.firstname) return 1;
             return 0;

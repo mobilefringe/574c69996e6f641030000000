@@ -345,8 +345,7 @@
             } else {
                 val.dates = start.format("MMM D") + " - " + end.format("MMM D");
             }
-            var rendered = Mustache.render(template_html, val);
-            item_rendered.push(rendered);
+            
         });
         item_list.sort(function(a, b){
             console.log(a,b)
@@ -355,7 +354,8 @@
             return 0;
         });
         $.each(item_list, function(key, val) {
-            
+            var rendered = Mustache.render(template_html, val);
+            item_rendered.push(rendered);
         });
         $(container).html(item_rendered.join(''));
     }

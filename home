@@ -29,7 +29,7 @@
         </script>
             <div class="feature_col">
                 <a href="/coupons">
-                    <img src="{{image_url}}" alt="Feature item" />
+                    <img src="{{image_url}}" alt="Click here to view coupons" />
                 </a>
             </div>
     </div>

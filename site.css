@@ -59,7 +59,10 @@ $animation_color: #6e3835;
     width: 230px;
 }
 .nav_container {
-        width: calc(100% - 230px);
+    width: calc(100% - 230px);
+}
+@media (max-width: 768px) {
+    
 }
 
 

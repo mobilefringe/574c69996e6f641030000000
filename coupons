@@ -133,6 +133,7 @@
             return o.store_name;
         });
         coupons.sort(function(a, b){
+            console.log(a.store_name,b.store_name)
             if(a.store_name < b.store_name) return -1;
             if(a.store_name > b.store_name) return 1;
             return 0;

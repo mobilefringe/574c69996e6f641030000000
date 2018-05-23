@@ -63,6 +63,9 @@ $animation_color: #6e3835;
 }
 .feature_row .feature_col {
     width : 25%;
+    &:last-child {
+        padding-right:0;
+    }
 }
 @media (max-width: 768px) {
     .logo_container {

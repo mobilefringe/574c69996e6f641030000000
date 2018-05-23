@@ -80,7 +80,9 @@ $animation_color: #6e3835;
     }
 }
 @media (max-width: 768px) { 
-    
+    .logo_container {
+        width: 330px;
+    }
 }
 
 

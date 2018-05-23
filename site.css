@@ -68,6 +68,10 @@ $animation_color: #6e3835;
     .logo_container {
         width: 330px;
     }
+    .feature_row .feature_col {
+        width: 100%;
+        
+    }
 }
 
 

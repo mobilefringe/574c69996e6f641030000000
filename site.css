@@ -62,7 +62,7 @@ $animation_color: #6e3835;
     width: calc(100% - 230px);
 }
 .feature_row .feature_col {
-    
+    width : 25%;
 }
 @media (max-width: 768px) {
     .logo_container {

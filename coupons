@@ -130,7 +130,7 @@
         renderGeneral('#category_container, #category_container2', '#category_template', selected_cats);
         $('#category_container, #category_container2').prepend('<li href="#" class="show_all_coupons padding_5 uppercase">All</li>');
         var coupons = getCouponsList().sortBy(function(o) {
-            return o.store_name
+            return o.store_name;
         });
         renderCoupons('#coupon_container', '#coupon_template', coupons);
 

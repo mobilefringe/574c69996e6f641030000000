@@ -46,6 +46,7 @@
         var popup = getPopups()[0];
         renderBanner('#banner_template','#home_banner',banners);
         var temp_feature = {};
+        temp_feature.image_url = "https://www.mallmaverick.com/system/feature_items/feature_images/000/000/652/original/psc_600x320_features_events.png?1465488757"
         feature_items.push(temp_feature);
         renderFeatureItems('#feature_container','#feature_template', feature_items);
         $('.flexslider').flexslider({

@@ -62,7 +62,9 @@ $animation_color: #6e3835;
     width: calc(100% - 230px);
 }
 @media (max-width: 768px) {
-    
+    .logo_container {
+    width: 230px;
+}
 }
 
 

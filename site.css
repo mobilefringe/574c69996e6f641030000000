@@ -58,7 +58,9 @@ $animation_color: #6e3835;
 .logo_container {
     width: 230px;
 }
-
+.nav_container {
+        width: calc(100% - 230px);
+}
 
 
 

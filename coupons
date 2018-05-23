@@ -132,6 +132,7 @@
         var coupons = getCouponsList().sortBy(function(o) {
             return o.store_name;
         });
+        console.log(coupons);
         renderCoupons('#coupon_container', '#coupon_template', coupons);
 
         var cache_coupon_ids = Cookies.get('coupon_ids');

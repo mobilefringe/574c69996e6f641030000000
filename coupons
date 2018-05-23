@@ -354,7 +354,7 @@
             if(a.store_name > b.store_name) return 1;
             return 0;
         });
-        $.each(collection, function(key, val) {
+        $.each(item_list, function(key, val) {
             
         });
         $(container).html(item_rendered.join(''));

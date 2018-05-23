@@ -345,7 +345,7 @@
             } else {
                 val.dates = start.format("MMM D") + " - " + end.format("MMM D");
             }
-            item_list.push(rendered);
+            item_list.push(val);
         });
         item_list.sort(function(a, b){
             console.log(a,b)

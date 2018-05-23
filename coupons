@@ -348,7 +348,7 @@
             var rendered = Mustache.render(template_html, val);
             item_rendered.push(rendered);
         });
-        item_rendered.sort(function(a, b){
+        item_list.sort(function(a, b){
             console.log(a,b)
             if(a.store_name < b.store_name) return -1;
             if(a.store_name > b.store_name) return 1;

@@ -69,7 +69,7 @@
                         Your Basket is empty at the moment!
                     </h2>
                     <p id="empty_basket_dets">
-                        Go back to the Online Offers page to add coupons to your printing list.
+                        Go back to the Online Offers page to add offers to your printing list.
                     </p>
                     <div class="coupon_dets_btns">
                         <a href="/coupons" class="dets_btn add_to_basket" style="">Online Offers Page</a>

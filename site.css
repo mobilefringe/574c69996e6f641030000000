@@ -58,10 +58,10 @@ body {
 }
 
 .logo_container {
-    width: 230px;
+    width: 200px;
 }
 .nav_container {
-    width: calc(100% - 230px);
+    width: calc(100% - 200px);
 }
 .feature_row {
     margin-left:auto;

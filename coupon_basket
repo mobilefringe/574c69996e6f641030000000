@@ -72,7 +72,7 @@
                         Go back to the Coupons page to add coupons to your printing list.
                     </p>
                     <div class="coupon_dets_btns">
-                        <a href="/coupons" class="dets_btn add_to_basket" style="">Coupons Page</a>
+                        <a href="/coupons" class="dets_btn add_to_basket" style="">Online Offers Page</a>
                     </div>
 
                 </div>

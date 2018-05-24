@@ -46,7 +46,7 @@
         var popup = getPopups()[0];
         renderBanner('#banner_template','#home_banner',banners);
         var temp_feature = {};
-        temp_feature.image_url = "https://www.mallmaverick.com/system/feature_items/feature_images/000/000/652/original/psc_600x320_features_events.png?1465488757";
+        temp_feature.image_url = "//codecloud.cdn.speedyrails.net/sites/59a03e9f6e6f64651d140000/image/jpeg/1527187958770/psc_phone_600x320_2.jpg";
         temp_feature.url = "/coupons";
         feature_items.push(temp_feature);
         renderFeatureItems('#feature_container','#feature_template', feature_items);

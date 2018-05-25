@@ -7,7 +7,7 @@
 </div>
 <div class="main_container mobile_padding coupons_container">
     <div class="visible_phone position_relative">
-        <a class="mobile_header" href="/coupon_basket">My Basket <div class="basket_count">(
+        <a class="mobile_header" href="/offer_basket">My Basket <div class="basket_count">(
                 <span class="basket_number" style="color:#000;position: relative; right: unset;top: unset;">0</span>)</div></a>
         <div>
             <a class="mobile_header" href="#" id="cat_dd2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -64,7 +64,7 @@
                 </ul>
             </div>
             <div class="col-md-3 col-xs-3">
-                <a href="/coupon_basket" class="show_all_stores">MY BASKET</a> 
+                <a href="/offer_basket" class="show_all_stores">MY BASKET</a> 
                 <div class="basket_count">
                 <span class="basket_number">0</span>
                     <img src="http://assets.codecloudapp.com/sites/59d7b1c56e6f64669e8d0000/image/png/1508351635000/Rectangle Copy 12@2x.png" class="" alt="">

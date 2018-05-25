@@ -15,7 +15,7 @@
     <div class="store_nav hidden_phone">
         <div class="row">
             <div class="col-md-3 col-xs-3">
-                <a class="" href="/online_offers">BACK TO Online Offers</a>
+                <a class="" href="/online_offers" style="font-size: 16px;">BACK TO Online Offers</a>
                 <!--active_store_nav-->
             </div>
             <div class="col-md-3 col-xs-3">

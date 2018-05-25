@@ -40,7 +40,7 @@
     <div class="visible_phone position_relative">
         <a class="mobile_header" href="/offer_basket">My Basket <div class="basket_count">(
                 <span class="basket_number">0</span>)</div><i class="fa fa-chevron-right visible_phone pull-right"></i></a>
-        <a class="mobile_header" href="/coupons"><i class="fa fa-chevron-left visible_phone pull-left"></i>Back to Online Offers</a>
+        <a class="mobile_header" href="/online_offers"><i class="fa fa-chevron-left visible_phone pull-left"></i>Back to Online Offers</a>
     </div>
     <div class="store_nav hidden_phone">
         <div class="row">

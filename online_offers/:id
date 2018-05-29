@@ -68,7 +68,7 @@
             <script id="coupon_details_template" type="x-tmpl-mustache/text">
                 <!--<a href="/events" class="back_to_list"><i class="fa fa-chevron-left"></i> &nbsp;Back to Events</a>-->
                 <div class=" coupon_image">
-                    <!--  <img src="http://assets.codecloudapp.com/sites/59d7b1c56e6f64669e8d0000/image/png/1507313420000/Lole_logo.png" alt="" />-->
+                    <!--  <img src="//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1507313420000/Lole_logo.png" alt="" />-->
                     <img src="{{promo_image_url_abs}}" class="full_border" style="{{promo_image}}" />
                 </div>
                 <div class="coupon_detail" id="product_1">

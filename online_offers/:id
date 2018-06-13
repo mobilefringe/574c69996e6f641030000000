@@ -62,7 +62,7 @@
     </div>
     <div class="details_col_3 hidden_phone">
             <a href="/events">
-            <img src="//codecloud.cdn.speedyrails.net/sites/57f2b1016e6f645d03550000/image/jpeg/undefined/dtl_440x1200_side_events.jpg"/></a>
+            <img src="//codecloud.cdn.speedyrails.net/sites/57f3de146e6f644974010000/image/jpeg/undefined/psc_440x1200_side_events.jpg"/></a>
         </div>
         <div class="details_col_9" id="coupon_details_container">
             <script id="coupon_details_template" type="x-tmpl-mustache/text">

@@ -57,7 +57,7 @@
     
     <!-- Site data -->
     <script>
-    $.getJSON("//rossmoor.mallmaverick.com/api/v4/shopsatrossmoor/subcategories.json?bust=true").done(function(data){
+        $.getJSON("//rossmoor.mallmaverick.com/api/v4/shopsatrossmoor/subcategories.json?bust=true").done(function(data){
             
         });
         setEndPoint('//peninsula.mallmaverick.com/api/v4/peninsula/all.json');

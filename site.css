@@ -73,6 +73,9 @@ body {
         }
     }
 }
+.uploaded-img-responsive {
+    max-width: 100%;
+}
 @media (max-width: 768px) {
     .logo_container {
         width: 330px;

@@ -1,0 +1,401 @@
+<link href="../coupons.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<div class="header_banner location_banner">
+    <div class="main_container">
+        <h4 class="header_banner_heading">Online Offers</h4>
+    </div>
+</div>
+<div class="main_container mobile_padding coupons_container">
+    <div class="visible_phone position_relative">
+        <a class="mobile_header" href="/offer_basket">My Basket <div class="basket_count">(
+                <span class="basket_number" style="color:#000;position: relative; right: unset;top: unset;">0</span>)</div></a>
+        <div>
+            <a class="mobile_header" href="#" id="cat_dd2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Select Category <i class="fa fa-chevron-down visible_phone pull-right"></i>
+        </a>
+        <ul id="category_container2" class="dropdown-menu" aria-labelledby="cat_dd2">
+            <script id="category_template" type="x-tmpl-mustache/text">
+                <li class="show_coupon_by_cats show_cat_stores padding_5 uppercase" data-id="{{id}}">{{name}}</li>    
+            </script>
+        </ul>
+        </div>
+        
+        <div><a class="mobile_header" href="#" id="store_dd2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Select Store <i class="fa fa-chevron-down visible_phone pull-right"></i>
+        </a>
+        <ul  class="dropdown-menu" aria-labelledby="store_dd2">
+            <div id="store_list_container2">
+                <script id="store_list_template" type="x-tmpl-mustache/text">
+                    <li class="show_coupon_by_stores show_cat_stores padding_5 uppercase" data-id="{{id}}" data-name="{{name}}">{{name}}</li>    
+                </script>
+          </div>  
+        </ul></div>
+        
+    </div>
+    <div class="store_nav hidden_phone">
+        <div class="row">
+            <div class="col-md-3 col-xs-3">
+                <a class="active_store_nav text-uppercase" href="">SORT Alphabetically</a>
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <a href="#" id="cat_dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    CATEGORIES
+                    <img src="//codecloud.cdn.speedyrails.net/sites/57f2b1016e6f645d03550000/image/png/1463153622000/chevron_down.png" class="category_icon" alt="">
+                </a>
+                <ul  class="dropdown-menu" aria-labelledby="cat_dd">
+                    <div id="category_container">
+                        <script id="category_template" type="x-tmpl-mustache/text">
+                           <li class="show_coupon_by_cats show_cat_stores padding_5 uppercase" data-id="{{id}}" data-name="{{name}}">{{name}}</li>    
+                        </script>
+                  </div>  
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <a href="#" id="store_dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    STORES
+                    <img src="//codecloud.cdn.speedyrails.net/sites/57f2b1016e6f645d03550000/image/png/1463153622000/chevron_down.png" class="category_icon" alt="">
+                </a>
+                <ul  class="dropdown-menu" aria-labelledby="store_dd">
+                    <div id="store_list_container">
+                        <script id="store_list_template" type="x-tmpl-mustache/text">
+                            <li class="show_coupon_by_stores show_cat_stores padding_5 uppercase" data-id="{{id}}" data-name="{{name}}">{{name}}</li>    
+                        </script>
+                  </div>  
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <a href="/offer_basket" class="show_all_stores">MY BASKET</a> 
+                <div class="basket_count">
+                <span class="basket_number">0</span>
+                    <img src="//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508351635000/Rectangle Copy 12@2x.png" class="" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="grid" class="row">
+            <div id="coupon_container">
+                <script id="coupon_template" type="x-tmpl-mustache/text">
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="product large" id="{{id}}" >
+                            <div class="make3D col-md-6 col-sm-6 col-xs-12">
+                                <div class="product-front">
+                                    <!--<div class="shadow"></div>-->
+                                    <img src="{{image_url}}" alt="" />
+                                </div>
+                            </div>	
+                            <div class="info-large col-md-6 col-sm-6 col-xs-12">
+                                <img src="//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508346683000/Basket@2x.png" class="basket_image add-to-basket" alt="" is_in_cart="false">
+                        	    <p>{{store_name}}</p>
+                            	<h4>{{name}}</h4>
+                            	<p>{{dates}}</p>
+                                
+                                <a class="add-cart-large" href="/online_offers/{{slug}}">View Details</a>                          
+                                             
+                            </div>
+                        </div> 
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script>
+    var category_of_stores = [];
+    var sorted_stores = [];
+    selected_coupon_id = [];
+    $(document).ready(function(e) {
+        init(e);
+        loadMallDataCached(renderAll);
+
+    });
+
+    function renderAll() {
+
+        var stores = getStoresList();
+        renderStoreList('#store_list_container', '#store_list_template', stores, "stores", "#", "Z");
+        renderStoreList('#store_list_container2', '#store_list_template', stores, "stores", "#", "Z");
+        $('#store_list_container, #store_list_container2').prepend('<li href="#" class="show_all_coupons  padding_5 uppercase">All</li>');
+        var categories = getStoreCategories();
+        var selected_cats = [];
+        $.each(category_of_stores, function(key, val) {
+            var temp = $.grep(categories, function(value, i) {
+                return (value.id == val.toString());
+            });
+            selected_cats.push(temp[0]);
+        });
+        renderGeneral('#category_container, #category_container2', '#category_template', selected_cats);
+        $('#category_container, #category_container2').prepend('<li href="#" class="show_all_coupons padding_5 uppercase">All</li>');
+        
+        var coupons = getCouponsList().sortBy(function(o) { return o.store_name });
+        var published_coupons = [];
+        $.each( coupons , function( key, val ){
+            var today = moment();
+            var webDate = moment(val.show_on_web_date);
+            if (today >= webDate) {
+                published_coupons.push(val)
+            } 
+        });
+        if (published_coupons.length > 0) {
+            renderCoupons('#coupon_container', '#coupon_template', published_coupons);
+        }
+
+        var cache_coupon_ids = Cookies.get('coupon_ids');
+        if (cache_coupon_ids) {
+            selected_coupon_id = JSON.parse(cache_coupon_ids);
+            // do a chack to make sure that if expired coupon is in cookie, it gets removed
+            $.each(selected_coupon_id, function(i, val) {
+                var new_arr = $.grep(coupons, function(value, i) {
+                    return (value.id.toString() == val);
+                });
+                if (new_arr.length == 0) {
+                    selected_coupon_id = $.grep(selected_coupon_id, function(value, i) {
+                        return (value !== val);
+                    });
+                }
+            });
+            Cookies.remove('coupon_ids');
+            Cookies.set('coupon_ids', JSON.stringify(selected_coupon_id)); //$.cookie("coupon_ids",JSON.stringify(selected_coupon_id));
+            updatePage();
+        }
+
+        $(".largeGrid").click(function() {
+            $(this).find('a').addClass('active');
+            $('.smallGrid a').removeClass('active');
+
+            $('.product').addClass('large').each(function() {});
+            setTimeout(function() {
+                $('.info-large').show();
+            }, 200);
+            setTimeout(function() {
+
+                $('.view_gallery').trigger("click");
+            }, 400);
+
+            return false;
+        });
+
+        $(".smallGrid").click(function() {
+            $(this).find('a').addClass('active');
+            $('.largeGrid a').removeClass('active');
+
+            $('div.product').removeClass('large');
+            $(".make3D").removeClass('animate');
+            $('.info-large').fadeOut("fast");
+            setTimeout(function() {
+                $('div.flip-back').trigger("click");
+            }, 400);
+            return false;
+        });
+
+        $(".smallGrid").click(function() {
+            $('.product').removeClass('large');
+            return false;
+        });
+
+        $('.colors-large a').click(function() {
+            return false;
+        });
+
+
+        $('.add-to-basket').each(function(i, el) {
+            $(el).click(function() {
+                var current_coupon_id = $(el).parent().parent().attr("id");
+                if ($(el).attr("is_in_cart") === "false") {
+
+                    $(el).attr("is_in_cart", "true");
+                    $(el).attr("src", "//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508347595000/CheckmarkGreen.png");
+                    $(el).parent().parent().addClass("green_selected_box");
+                    //  $(".basket_number").text(parseInt($(".basket_number").text())+1);
+
+                    selected_coupon_id.push(current_coupon_id);
+                } else {
+                    $(el).attr("is_in_cart", "false");
+                    $(el).attr("src", "//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508346683000/Basket@2x.png");
+                    $(el).parent().parent().removeClass("green_selected_box");
+
+                    //remove coupon from list variable
+                    selected_coupon_id = $.grep(selected_coupon_id, function(val, i) {
+                        return (val !== current_coupon_id);
+                    });
+                }
+                //add updated coupon list to localstorage
+                Cookies.set('coupon_ids', '');
+                Cookies.set('coupon_ids', JSON.stringify(selected_coupon_id));
+                $(".basket_number").text((Object.keys(selected_coupon_id).length));
+            });
+        })
+
+        function updatePage() {
+            // selected_coupon_id;
+            $(".basket_number").text((Object.keys(selected_coupon_id).length));
+            $.each(selected_coupon_id, function(key, val) {
+                $("#" + val + " .add-to-basket").attr("is_in_cart", "true");
+                $("#" + val + " .add-to-basket").attr("src", "//codecloud.cdn.speedyrails.net/sites/59d7b1c56e6f64669e8d0000/image/png/1508347595000/CheckmarkGreen.png");
+                $("#" + val).addClass("green_selected_box");
+            });
+
+        }
+
+        $('.show_coupon_by_stores').click(function(e) {
+            $("#coupon_container").children().show();
+            coupons = getStoreCouponsListByStoreName();
+            var store_name = $(this).attr('data-name');
+            $('.active_cat').removeClass('active_cat');
+            $(this).addClass('active_cat');
+            $(".product.large").hide();
+
+            $.each(coupons, function(i, val) {
+                if (store_name == val.store_name) {
+                    $("#" + val.id).show();
+                }
+
+            });
+            $.each($("#coupon_container").children(), function(i, val) {
+                if (!$(val).children().is(":visible")) {
+                    $(val).hide();
+                }
+            })
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            e.preventDefault();
+        });
+
+        $('.show_coupon_by_cats').click(function(e) {
+            $("#coupon_container").children().show();
+            coupons = getStoreCouponsListByStoreName();
+            var cat_id = $(this).attr('data-id');
+            $('.active_cat').removeClass('active_cat');
+            $(this).addClass('active_cat');
+            $(".product.large").hide();
+
+            $.each(sorted_stores, function(i, val) {
+                if (val.categories !== null && val.categories !== undefined) {
+                    var is_inArray = $.grep(val.categories, function(i) {
+                        return i.toString() == cat_id;
+                    });
+                    if (is_inArray.length > 0) {
+                        $.each(coupons, function(i, value) {
+                            if (val.name == value.store_name) {
+                                $("#" + value.id).show();
+                            }
+
+                        });
+                    }
+                }
+
+            });
+            $.each($("#coupon_container").children(), function(i, val) {
+                if (!$(val).children().is(":visible")) {
+                    $(val).hide();
+
+                }
+            })
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            e.preventDefault();
+        });
+        $('.show_all_coupons').click(function(e) {
+            $("#coupon_container").children().show();
+            $("#coupon_container .product.large").show();
+
+            e.preventDefault();
+        });
+
+        $('.custom_backdrop').remove();
+        $('.yield').fadeIn();
+        show_content();
+    }
+
+    function renderCoupons(container, template, collection) {
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        Mustache.parse(template_html);
+        $.each(collection, function(key, val) {
+            if (val.promotionable_type == "Store") {
+                var store_details = getStoreDetailsByID(val.promotionable_id);
+                val.store_detail_btn = store_details.slug;
+                val.store_name = store_details.name;
+                val.image_url = "//mallmaverick.com" + store_details.store_front_url;
+                if (val.image_url.indexOf('missing.png') > -1) {
+                    val.image_url = site_json.default_image;
+                }
+            } else {
+                val.store_name = site_json.name;
+                val.image_url = site_json.default_image;
+            }
+
+            if (val.promo_image_url_abs.indexOf('missing.png') > -1) {
+                val.promo_image_url_abs = site_json.default_image;
+                // val.promo_image = "display:none";
+                // val.full_width = "width:100%"
+            }
+            if (val.description.length > 200) {
+                val.description_short = val.description.substring(0, 200) + "..."
+            } else {
+                val.description_short = val.description
+            }
+
+            var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+            var start = moment(val.start_date).tz(getPropertyTimeZone());
+            var end = moment(val.end_date).tz(getPropertyTimeZone());
+            // if (start.format("DMY") == end.format("DMY")) {
+            //     val.dates = start.format("MMM D");
+            // } else {
+            val.dates = end.format("MMM D");
+            // }
+            item_list.push(val);
+        });
+        item_list.sort(function(a, b){
+            if(a.store_name < b.store_name) return -1;
+            if(a.store_name > b.store_name) return 1;
+            return 0;
+        });
+        $.each(item_list, function(key, val) {
+            var rendered = Mustache.render(template_html, val);
+            item_rendered.push(rendered);
+        });
+        $(container).html(item_rendered.join(''));
+    }
+
+    function renderStoreList(container, template, collection, type, starter, breaker) {
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        Mustache.parse(template_html); // optional, speeds up future uses
+        var store_initial = "";
+        $.each(collection, function(key, val) {
+            if (type == "stores" || type == "category_stores") {
+                if (!val.store_front_url || val.store_front_url.indexOf('missing.png') > -1 || val.store_front_url.length === 0) {
+                    val.alt_store_front_url = site_json.default_image;
+                } else {
+                    val.alt_store_front_url = getImageURL(val.store_front_url);
+                }
+            }
+            var rendered = Mustache.render(template_html, val)
+            if (val != null && val != undefined && val.total_published_coupons > 0) {
+                if (val.categories !== null && val.categories !== undefined) {
+                    $.each(val.categories, function(key, value) {
+
+                        var is_inArray = $.inArray(value, category_of_stores);
+                        if (is_inArray == -1) {
+                            category_of_stores.push(value);
+                        }
+                    });
+                }
+                sorted_stores.push(val);
+                item_rendered.push(rendered);
+            }
+        });
+        $(container).show();
+        $(container).html(item_rendered.join(''));
+    }
+</script>
